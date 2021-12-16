@@ -31,13 +31,13 @@ function renderBlog() {
   for (let i = 0; i < blogs.length; i++) {
     contentContainer.innerHTML += `
             <div class="blog-list-item">
-              <div class="blog-image">
-              <img src="${blogs[i].image}" alt="" />
+                <div class="blog-image">
+                <img src="${blogs[i].image}" alt="" />
             </div>
             <div class="blog-content">
-               <div class="btn-group">
-              <button class="btn-edit">Edit Post</button>
-              <button class="btn-post">Post Blog</button>
+              <div class="btn-group">
+                <button class="btn-edit">Edit Post</button>
+                <button class="btn-post">Post Blog</button>
             </div>
             <h1>
               <a href="blog-detail.html" target="_blank"
@@ -45,9 +45,12 @@ function renderBlog() {
               >
             </h1>
             <div class="detail-blog-content">
-              12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah
+              ${getFullTime(blogs[i].postAt)} | Ichsan Emrald Alamsyah
             </div>
             <p>${blogs[i].content}</p>
+            <div style="text-align: right; margin-top: 20px; font-size: 15px; color:grey">
+              ${getDistanceTime(blogs[i].postAt)}
+            </div>
                                    `;
   }
 }
@@ -68,12 +71,56 @@ let month = [
 ];
 
 function getFullTime(time) {
-  let date = time.getDate()
-  let monthIndex = time.getMonth()
-  let year = time.getFullYear()
-  let hours = time.getHours()
-  let menutes = time.getMinutes()
+  let date = time.getDate();
+  let monthIndex = time.getMonth();
+  let year = time.getFullYear();
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
 
-  let result= ``
+  let result = `${date} ${month[monthIndex]} ${year} ${hours}:${minutes} WIB`;
 
+  return result;
 }
+
+function getDistanceTime(time) {
+  let timePost = time;
+  let timeNow = new Date();
+
+  let distance = timeNow - timePost;
+
+  let miliseconds = 1000;
+  let secondsInMinutes = 60;
+  let minutesInHours = 60;
+  let hoursInDay = 23;
+
+  let disctanceDay = Math.floor(
+    distance / (miliseconds * secondsInMinutes * minutesInHours * hoursInDay)
+  );
+
+  if (disctanceDay >= 1) {
+    return `${disctanceDay} Day Ago`;
+  } else {
+    let distanceHour = Math.floor(
+      distance / (miliseconds * secondsInMinutes * minutesInHours)
+    );
+
+    if (distanceHour >= 1) {
+      return `${distanceHour} Hour Ago`;
+    } else {
+      let distanceMinutes = Math.floor(
+        distance / (miliseconds * secondsInMinutes)
+      );
+      if (distanceMinutes >= 1) {
+        return `${distanceMinutes} Minutes Ago`;
+      } else {
+        let disctanceSeconds = Math.floor(distance / miliseconds);
+
+        return `${disctanceSeconds} Seconds Ago`;
+      }
+    }
+  }
+}
+
+setInterval(() => {
+  renderBlog();
+}, 1000);

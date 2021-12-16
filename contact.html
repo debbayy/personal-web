@@ -9,22 +9,25 @@
     <title>Contact Me</title>
   </head>
   <body>
-     <nav>
-      <div class="left">
-        <img src="/DAY 3/assets/logo.png" alt="" />
+         <nav>
+      <div class="left-side">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="logo" />
+        </a>
         <ul>
           <li>
             <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
+            <a href="blog.html" class="list-active">Blog</a>
           </li>
         </ul>
       </div>
-      <div class="right">
-        <a href="contact.html">Contact me</a>
+      <div class="right-side">
+        <a href="contact.html"> Contact Me </a>
       </div>
     </nav>
+
     <form class="data" action="">
   <!--     <h3>BIODATA</h3> -->
       <div>
@@ -68,12 +71,12 @@
           <label for="your-message">Your Message</label>
           <textarea name="your-message" id="your-message" cols="30" rows="10" placeholder="Please input Your Messager"></textarea>
       </div>
-       <div class="cek">
+       <!-- <div class="cek">
          <input type="checkbox" value="Dengan ini Anda menyetujui semua data adalah benar" onclick="getClick(this.value)">Dengan ini Anda menyetujui semua data adalah benar
             <label id="cek" for="cek">
               Dengan ini Anda menyetujui semua data adalah benar
             </label>
-      </div>
+      </div> -->
       </div>
        <button type="button" onclick="submitForm()">Submit</button>
 
