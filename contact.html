@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Contact Me</title>
+  </head>
+  <body>
+     <nav>
+      <div class="left">
+        <img src="/DAY 3/assets/logo.png" alt="" />
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="contact.html">Contact me</a>
+      </div>
+    </nav>
+    <form class="data" action="">
+  <!--     <h3>BIODATA</h3> -->
+      <div>
+        <label for="input-name">Name</label>
+        <input
+          class="input-data"
+          id="input-name"
+          type="text"
+          placeholder="Please input nama" />
+      </div>
+
+      <div>
+        <label for="input-email">Email</label>
+        <input
+          class="input-email"
+          id="input-email"
+          type="email"
+          placeholder="Please input email" />
+      </div>
+
+      <div>
+        <label for="phone-number">Phone Number</label>
+        <input
+          class="input-number"
+          id="phone-number"
+          type="number"
+          pattern="[0-9]{12}"
+          placeholder="Please input Phone Number"
+        />
+      </div>
+
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="Male">Male</option>
+          <option value="Famale">Famale</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+          <label for="your-message">Your Message</label>
+          <textarea name="your-message" id="your-message" cols="30" rows="10" placeholder="Please input Your Messager"></textarea>
+      </div>
+       <div class="cek">
+         <input type="checkbox" value="Dengan ini Anda menyetujui semua data adalah benar" onclick="getClick(this.value)">Dengan ini Anda menyetujui semua data adalah benar
+            <label id="cek" for="cek">
+              Dengan ini Anda menyetujui semua data adalah benar
+            </label>
+      </div>
+      </div>
+       <button type="button" onclick="submitForm()">Submit</button>
+
+    </form>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* body {
+  margin: 0;
+} */
+
+nav {
+  display: flex;
+  background-color: whitesmoke;
+  height: 7vh;
+}
+
+nav .left {
+  /*  background-color: aqua; */
+  flex: 50%;
+  padding: 10px;
+  padding-left: 90px;
+  display: flex;
+  align-items: center;
+}
+
+nav .left li {
+  display: inline;
+}
+
+nav .left ul li {
+  display: inline;
+}
+
+nav .left ul li a {
+  display: inline;
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+
+nav .right {
+  /* background-color: red; */
+  display: inline;
+  flex: 50%;
+  display: flex;
+  text-align: right;
+  padding: 10px;
+  padding-right: 90px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .right a {
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* ================navbar=================== */
+
+.container {
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .selection {
+  display: flex;
+  width: 85%;
+  /* background-color: blue; */
+}
+
+/* =========================sebelah kiri============== */
+
+.selection .left {
+  flex: 35%;
+}
+
+/* ====form sebelah kiri====== */
+.coloum {
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.8);
+}
+
+.container .selection p {
+  color: rgb(87, 87, 87);
+  margin: 5px;
+}
+.img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* =========================sebelah kiri============== */
+.selection .right {
+  flex: 75%;
+  /* background-color: red; */
+  padding-left: 30px;
+  /* display: flex; */
+  position: relative;
+}
+
+.selection .right div {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  right: 80px;
+}
+.selection .right h1 {
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.selection .right p {
+  text-align: justify;
+  color: grey;
+  color: #959595;
+  margin-top: 20 px;
+  margin-bottom: 20px;
+}
+
+.selection .right .skill {
+  display: flex;
+}
+
+.selection .right .skill span {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.selection .right .skill p {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.selection .right .skill img {
+  padding: 2px;
+}
+
+.selection .right .skill h3 {
+  padding: 5px;
+}
+
+.selection .right .sosmed-list {
+  position: absolute;
+  /* margin-top: 10px; */
+}
+
+.selection .right .sosmed-list a {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.selection .right .sosmed-list a img {
+  cursor: pointer;
+  width: 30px;
+}
+
+/*
+=======================contact me================ */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  /* background-color: aqua; */
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px 0px rgba(48, 48, 48, 0.8);
+}
+
+.data {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 25px;
+}
+
+.input-data {
+  /* background-color: gray; */
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-email {
+  /* background-color: gray; */
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-number {
+  /* background-color: gray; */
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+}
+
+textarea {
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: none;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+select {
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  /* appearance: none; */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
