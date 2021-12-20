@@ -21,7 +21,9 @@ function addBlog(event) {
   /* console.log(blogs) */
   alert("Data Berhasil di Simpan");
 
+  /*  mainFunction(); */
   renderBlog();
+  detailBlog()
 }
 
 function renderBlog() {
@@ -45,14 +47,34 @@ function renderBlog() {
               >
             </h1>
             <div class="detail-blog-content">
-              ${getFullTime(blogs[i].postAt)} | Ichsan Emrald Alamsyah
+              ${getFullTime(blogs[i].postAt)} | Deby Trisandi
             </div>
             <p>${blogs[i].content}</p>
             <div style="text-align: right; margin-top: 20px; font-size: 15px; color:grey">
               ${getDistanceTime(blogs[i].postAt)}
             </div>
                                    `;
-  }
+  } 
+}
+
+function detailBlog() {
+  let detailsContainer = document.getElementById("blog-detail");
+   detailsContainer.innerHTML =""
+    detailsContainer.innerHTML = `
+    <div> class="blog-detail">
+      <div class="blog-detail-container">
+        <h1>${blogs[i].title}</h1>
+        <div class="author"> ${getFullTime(
+          blogs[i].postAt
+        )} | Deby Trisandi</div>
+        <img src="${blogs[i].image}" alt="detail" />
+        <p>
+          ${blogs[i].content}
+        </p>
+      </div>
+    </div>
+
+  `;
 }
 
 let month = [
